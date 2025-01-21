@@ -4,6 +4,9 @@ import { Produto } from './produtos/entities/produtos.entity';
 import { ProdutoModule } from './produtos/produtos.module';
 import { Categoria } from './categoria/entities/categoria.entity';
 import { CategoriaModule } from './categoria/categoria.modulo';
+import { AuthModule } from './auth/auth.module';
+import { Usuario } from './usuario/entities/usuario.entity';
+import { UsuarioModule } from './usuario/entities/usuario.module';
 
 
 @Module({
@@ -15,11 +18,13 @@ import { CategoriaModule } from './categoria/categoria.modulo';
       username: 'root',
       password: 'root',
       database: 'db_ecommerce',
-      entities: [Produto, Categoria],
+      entities: [Produto, Categoria, Usuario],
       synchronize: true,
     }),
     ProdutoModule,
-    CategoriaModule
+    CategoriaModule,
+    AuthModule,
+    UsuarioModule
   ],
   controllers: [],
   providers: [],

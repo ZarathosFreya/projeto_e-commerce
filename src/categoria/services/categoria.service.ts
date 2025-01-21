@@ -21,6 +21,7 @@ export class CategoriaService{
                 },
                 relations: {
                     produto: true
+                    
                 }
             });
     
